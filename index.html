@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catch the Dot Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>🎯 Catch the Dot</h1>
+    <div class="hud">
+      <div id="score">Score: 0</div>
+      <div id="timerBar"><div id="timerFill"></div></div>
+    </div>
+
+    <div id="dot" class="hidden"></div>
+
+    <div id="start-screen">
+      <h2>🎯 Catch the Dot</h2>
+      <p>Click the green dot to gain points. Avoid red bombs!</p>
+      <button onclick="startGame()">Play Game</button>
+    </div>
+
+    <div id="game-over" class="hidden">
+      <h2>Game Over!</h2>
+      <p>Your Score: <span id="final-score">0</span></p>
+      <h3>🏆 Leaderboard</h3>
+      <ol id="leaderboard"></ol>
+      <button onclick="startGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Replace these in your HTML -->
+<audio id="click-sound" src="https://cdn.jsdelivr.net/gh/ChrisAchinga/sound-effects/click.wav"></audio>
+<audio id="bomb-sound" src="https://cdn.jsdelivr.net/gh/ChrisAchinga/sound-effects/bomb.wav"></audio>
+<audio id="gameover-sound" src="https://cdn.jsdelivr.net/gh/ChrisAchinga/sound-effects/gameover.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
