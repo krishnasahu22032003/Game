@@ -1,0 +1,129 @@
+/* style.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at center, #111, #000);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #00f7ff;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#score {
+  font-size: 1.2rem;
+}
+
+#timerBar {
+  flex-grow: 1;
+  height: 10px;
+  background: #333;
+  margin-left: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#timerFill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #00ff88, #00bfff);
+  transition: width 1s linear;
+}
+
+#dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00ff88;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00ff88;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.bomb {
+  background: red !important;
+  box-shadow: 0 0 20px red !important;
+}
+
+#start-screen, #game-over {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 3;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#leaderboard {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#leaderboard li {
+  background: rgba(255,255,255,0.1);
+  margin: 5px 0;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00c6ff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0072ff;
+}
+
+@media (max-width: 500px) {
+  #dot {
+    width: 40px;
+    height: 40px;
+  }
+}"
